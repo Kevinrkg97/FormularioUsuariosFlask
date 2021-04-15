@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Inicio {% endblock %}
+{% block content %}
+<div class="container">
+    <div class="img">
+        <img src="/static/images/index.svg" alt="">
+    </div>
+    
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Fecha de Registro</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <th> {{ user.id }}  </th>
+            <th> {{ user.name }} </th>
+            <th> {{ user.email }} </th>
+            <th> {{ user.created_at }} </th>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+</div>
+
+
+
+
+
+
+
+{% endblock %}
